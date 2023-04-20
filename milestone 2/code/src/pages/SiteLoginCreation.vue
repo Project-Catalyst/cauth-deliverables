@@ -60,7 +60,7 @@
         <!-- <q-toggle v-model="accept" label="I accept the license and terms" :rules="[(val) => val || 'Please accpet license and terms']"/> -->
         <q-space/>
         <q-space/>
-        <q-btn label="Mint Site Token(s)" type="submit"/>
+        <q-btn label="Mint Site Token" type="submit"/>
       </div>
     </q-stepper>
     </q-form>
