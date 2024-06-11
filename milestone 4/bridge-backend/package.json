@@ -1,0 +1,31 @@
+{
+  "name": "oauth-bridge",
+  "version": "1.0.0",
+  "description": "Bridge for CAuth",
+  "nodemonConfig": {
+    "ignore": [
+      "**/web/**"
+    ],
+    "delay": 2500
+  },
+  "scripts": {
+    "dev": "nodemon index.js",
+    "debug": "nodemon --inspect index.js",
+    "start": "node index.js",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "Michał Wojtera",
+  "devDependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "@meshsdk/core": "1.5.24-alpha.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0",
+    "oauth2-server": "^3.1.1"
+  }
+}
