@@ -166,11 +166,10 @@ app.get("/api/info", async function (request, response) {
   let req = new Request(request);
   let res = new Response(response);
     console.log("GET /api/info");
-    console.log(request)
     response.status(200).json({
-      zosia1:"asdfaert34t34egergh323r312tger",
-      zosia2:"CAuth User",
-      zosia3:"test@cauth.org"
+      id:"asset1el4ryhqkn4eny8l5ea7lt4eg2csfr7882atswn",
+      displayName:"McLovin",
+      email:"mclovin@superbad.com"
     })
 });
 
