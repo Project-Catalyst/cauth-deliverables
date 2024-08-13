@@ -10,8 +10,8 @@ This repository is for documentation and reference purposes.
 
 ## Milestones
 
-* [Milestone 1](milestone%201/README.md)
-* [Milestone 2](milestone%202/README.md)
-* [Milestone 3](milestone%203/README.md)
-* [Milestone 4](milestone%204/README.md)
-* [Milestone 5](milestone%205/README.md)
+* [Milestone 1](milestone%201/)
+* [Milestone 2](milestone%202/)
+* [Milestone 3](milestone%203/)
+* [Milestone 4](milestone%204/)
+* [Milestone 5](milestone%205/)
