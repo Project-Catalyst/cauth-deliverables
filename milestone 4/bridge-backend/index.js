@@ -31,7 +31,7 @@ app.oauth = new OAuth2Server({
 
 //Not using CORS config, or rather using a least restrictive config
 app.use(cors({
-  origin: ['https://login.cauth.org','https://wikijs.cauth.org'],
+  origin: ['https://login.cauth.org','https://wiki.cauth.org'],
   allowedHeaders: 'Content-Type, Authorization',
   optionsSuccessStatus: 204
 }));
