@@ -3,9 +3,11 @@ const { MongoMemoryServer } = require("mongodb-memory-server");
 const mongoose = require("mongoose");
 const app = express();
 const cors = require('cors');
-// CORS configuration
+//CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:8080', // Allow only http://localhost:8080
+  origin: 'https://demo.cauth.org', // Allow only http://localhost:8080
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
   optionsSuccessStatus: 200 // For legacy browser support
 };
 
