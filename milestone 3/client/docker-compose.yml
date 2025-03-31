@@ -1,0 +1,13 @@
+name: cauth-demo
+services:
+  nginx:
+    build: .
+    restart: unless-stopped
+    #ports:
+    #  - "8080:80"
+    networks:
+      proxy-net:
+        ipv4_address: 172.0.0.248
+networks:
+  proxy-net:
+    external: true

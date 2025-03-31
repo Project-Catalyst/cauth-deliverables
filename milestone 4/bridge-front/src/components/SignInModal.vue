@@ -13,17 +13,6 @@
       <q-card-section class="row">
         <p class="tex"></p>
       </q-card-section>
-
-      <!-- Terms and Conditions section-->
-      <q-card-section class="q-pt-none row" v-if="installedWallets.length > 0">
-        <div class="col-1">
-          <q-checkbox v-model="termsAccepted" />
-        </div>
-        <div class="col">
-          By checking this box and connecting my wallet, I confirm that I have
-          read, understood, and agreed to the <u>Terms and Conditions</u>
-        </div>
-      </q-card-section>
       <q-card-section
         v-if="installedWallets.length > 0"
         class="row justify-evenly items-center content-center"
@@ -34,7 +23,6 @@
           :icon="'img:' + wallet.icon"
           :label="wallet.name"
           @click="connectWallet(wallet)"
-          :disable="!termsAccepted"
           size="md"
           class="col-3"
         />
@@ -103,15 +91,6 @@ const value = computed({
   },
   set(value) {
     emit('update:modelValue', value);
-  },
-});
-
-const termsAccepted = computed({
-  get() {
-    return cAuthStore.termsAccepted;
-  },
-  set(value) {
-    cAuthStore.termsAccepted = value;
   },
 });
 
@@ -203,7 +182,6 @@ async function getNfts(assets: AssetExtended[]) {
 
 async function loginWithCAuth(nft: any) {
   console.log('Trying to login using', nft);
-  console.log(`${process.env.BACKEND_URL}`);
 
   const authCode = crypto.randomBytes(64).toString('hex');
 
@@ -213,25 +191,30 @@ async function loginWithCAuth(nft: any) {
     metadata: nft.metadata,
     authCode: authCode,
   };
+  const stringifiedData = JSON.stringify(dataToSign);
 
   const addresses = await cAuthStore.browserWallet.getRewardAddresses();
   const address = addresses[0];
   const signature = await cAuthStore.browserWallet
-    .signData(address, JSON.stringify(dataToSign))
+    .signData(address, stringifiedData)
     .catch((error) => {
       $q.notify({
         message: error.message,
         color: 'negative',
       });
       console.log(error);
+      return null;
     });
 
+  if (!signature) {
+    return;
+  }
+  console.log('Signing result is', signature);
+
   try {
-    const correctlySigned = checkSignature(
-      JSON.stringify(dataToSign),
-      address,
-      signature
-    );
+    const correctlySigned = checkSignature(stringifiedData, address, signature);
+
+    console.log(`Signature verification was ${correctlySigned}`);
 
     if (correctlySigned) {
       //Hide this popup
@@ -294,6 +277,11 @@ async function loginWithCAuth(nft: any) {
           }
         }
       }
+    } else {
+      $q.notify({
+        message: 'The signature is incorrect',
+        color: 'negative',
+      });
     }
   } catch (e) {
     console.log(e);

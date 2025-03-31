@@ -1,0 +1,34 @@
+baseURL = 'https://www.cauth.org/'
+languageCode = 'en-us'
+title = 'CAuth - Login with Cardano Wallet'
+theme = 'whisper'
+
+[[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Docs"
+    url = "/docs/"
+    weight = 2
+
+[[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 3
+
+[params]
+  homepage_button_link = '/docs/'
+  homepage_button_text = 'Read the Docs'
+  showSummary = false
+  
+[params.logo]
+    mobile = "/images/logo.svg"
+    standard  = "/images/logo.svg"
+
+[params.footer]
+    copyright_text = 'Copyright 2025 - CAuth'
+
+[markup.goldmark.renderer]
+    unsafe = true

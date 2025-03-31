@@ -56,7 +56,7 @@ app.get("/api/authorize", async function (request, response) {
     .then((token) => {
       //Authentication successful
       //Q: Shouldn't I redirect back to the redirect_uri?
-      res.status(200).json({ message: "Authenticated", token: token });
+      response.status(200).json({ message: "Authenticated", token: token });
     })
     .catch((err) => {
       //No joy on authentication. We are hitting the web to do the CAuth login
@@ -165,12 +165,32 @@ app.post("/api/token", async function (request, response) {
 app.get("/api/info", async function (request, response) {
   let req = new Request(request);
   let res = new Response(response);
-    console.log("GET /api/info");
+  console.log("GET /api/info");
+  // console.log(req);
+  app.oauth
+  .authenticate(req, res)
+  .then((token) => {
     response.status(200).json({
-      id:"asset1el4ryhqkn4eny8l5ea7lt4eg2csfr7882atswn",
+      id:"asset1c7djzs76nny9zlv4ct0zte3w29vcxwyjwhzhm8",
       displayName:"McLovin",
-      email:"mclovin@superbad.com"
+      email:"b8a3610269b7b5416cdda37058be9814a5c4a0400c2e8d5940e3b92c8bf19f66@cauth.org"
     })
+  })
+  .catch((err) => {
+    //No joy on authentication. We are hitting the web to do the CAuth login
+    console.log(err);
+    return response.redirect(
+      util.format(
+        "/?redirect=%s&response_type=%s&client_id=%s&redirect_uri=%s&scope%s&state=%s",
+        req.route.path,
+        req.query.response_type,
+        req.query.client_id,
+        encodeURIComponent(req.query.redirect_uri),
+        req.query.scope,
+        req.query.state
+      )
+    );
+  });
 });
 
 app.listen(port, () => {

@@ -91,9 +91,12 @@ module.exports = configure(function (ctx) {
       server: {
         type: 'http',
       },
-      host: '127.0.0.1',
-      port: 8181,
+      host: '172.0.0.254',
+      port: 8081,
       open: false, // opens browser window automatically
+      client: {
+        webSocketURL: 'wss://login.cauth.org/ws',
+      },
     },
 
     // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-framework

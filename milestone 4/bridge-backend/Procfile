@@ -1,3 +1,0 @@
-cauth-wiki: docker compose -f docker-compose-wiki.yml up
-cauth-bridge: pnpm debug
-cauth-bridge-web: cd ../cauth-bridge-web; quasar d

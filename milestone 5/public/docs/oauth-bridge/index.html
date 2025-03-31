@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>OAuth Bridge - CAuth - Login with Cardano Wallet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://www.cauth.org/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+  <link rel="stylesheet" href="/css/lightbox.css">
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://www.cauth.org/"><img width="70" height="70" alt="Logo" src="/images/logo.svg" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://www.cauth.org/"><img  width="70" height="70" alt="Logo" src="/images/logo.svg" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-about">
+      <a href="/about">
+        <span>About</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+      <li class="">
+        <a href="/docs/getting-started/">Getting Started</a>
+      </li>
+    
+      <li class="">
+        <a href="/docs/nft-issuer/">NFT Issuer</a>
+      </li>
+    
+      <li class="">
+        <a href="/docs/libraries/">Libraries</a>
+      </li>
+    
+      <li class="active">
+        <a href="/docs/oauth-bridge/">OAuth Bridge</a>
+      </li>
+    
+      <li class="">
+        <a href="/docs/project-close-out/">Project Close Out</a>
+      </li>
+    
+      <li class="">
+        <a href="/docs/further-reading/">Further Reading</a>
+      </li>
+    
+  </ul>
+</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">OAuth Bridge</h1>
+<div class="content ">
+  <h3 id="oauth-bridge-for-cauth">OAuth Bridge for cAuth</h3>
+<p>The OAuth bridge enables traditional Web2 applications to authenticate users through Cardano NFT credentials. This bridge acts as a translator between blockchain-based authentication and the widely-adopted OAuth 2.0 protocol.
+<a href="https://github.com/Project-Catalyst/cauth-deliverables/tree/8692a135a23642e1e749567c85b37ed846521c1f/milestone%204">GitHub</a></p>
+<h3 id="why-oauth-bridge">Why OAuth Bridge?</h3>
+<ul>
+<li>Widespread Adoption: OAuth 2.0 is the industry standard for authorization, used by millions of applications worldwide. Many existing platforms and frameworks have built-in support for OAuth 2.0, making it the de-facto standard for authentication and authorization.</li>
+<li>Legacy System Integration: While Web3 technologies are growing, many organizations still rely on traditional Web2 applications. The OAuth bridge allows these systems to benefit from blockchain-based authentication without requiring major architectural changes.</li>
+</ul>
+<h3 id="how-oauth-20-works">How OAuth 2.0 Works</h3>
+<ol>
+<li>
+<p>User Initiates Login</p>
+<ul>
+<li>User clicks &ldquo;Login&rdquo; on the application</li>
+<li>Application redirects to the authorization server</li>
+</ul>
+</li>
+<li>
+<p>Authorization Request</p>
+<ul>
+<li>Application requests specific permissions (scopes)</li>
+<li>User reviews and approves these permissions</li>
+</ul>
+</li>
+<li>
+<p>Token Exchange</p>
+<ul>
+<li>Authorization server provides an authorization code</li>
+<li>Application exchanges this code for access tokens</li>
+<li>Tokens are used to access protected resources</li>
+</ul>
+</li>
+</ol>
+<h3 id="how-the-cauth-oauth-bridge-works">How the cAuth OAuth Bridge Works</h3>
+<h4 id="bridge-as-authorization-server">Bridge as Authorization Server</h4>
+<p>The bridge acts as an OAuth 2.0 authorization server
+It verifies NFT credentials on the Cardano blockchain</p>
+<h5 id="authentication-flow">Authentication Flow</h5>
+<ul>
+<li>User initiates login with Web2 application</li>
+<li>Bridge connects to user&rsquo;s Cardano wallet</li>
+<li>Bridge verifies NFT credential</li>
+<li>Upon verification, bridge issues OAuth tokens</li>
+<li>Web2 application receives standard OAuth response</li>
+</ul>
+<h5 id="token-management">Token Management</h5>
+<ul>
+<li>Bridge manages token lifecycle</li>
+<li>Handles token refresh and revocation</li>
+<li>Maps OAuth sessions to blockchain credentials</li>
+</ul>
+<h4 id="implementation-benefits">Implementation Benefits</h4>
+<ul>
+<li>No Code Changes: Web2 applications can implement cAuth using existing OAuth libraries</li>
+<li>Standard Compliance: Follows OAuth 2.0 specification for maximum compatibility</li>
+<li>Security: Leverages both OAuth security practices and blockchain verification</li>
+<li>Flexibility: Supports various OAuth flows (Authorization Code, Implicit, etc.)</li>
+</ul>
+<p><a href="https://wiki.cauth.org/login">demo</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ff2XFuq8S3o?si=vh_AKkA1ef83_m9T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+          
+            <div class="copyright">Copyright 2025 - CAuth</div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  <script type="text/javascript" src="/js/lightbox.js"></script>
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.js"></script>
+  
+
+  
+
+
+</body>
+
+</html>

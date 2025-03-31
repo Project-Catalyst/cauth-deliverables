@@ -1,0 +1,17 @@
+name: cauth-docs
+
+services:
+  server:
+    image: hugomods/hugo:exts-non-root
+    restart: unless-stopped
+    user: "1000:1000"
+    command: server -D --baseURL=https://www.cauth.org --appendPort=false
+    volumes:
+      - ./:/src
+      - ~/hugo_cache:/tmp/hugo_cache
+    networks:
+      proxy-net:
+        ipv4_address: 172.0.0.253
+networks:
+  proxy-net:
+    external: true

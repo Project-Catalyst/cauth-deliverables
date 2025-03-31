@@ -9,7 +9,7 @@
 // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js
 
 /* eslint-disable @typescript-eslint/no-var-requires */
-
+require('dotenv').config();
 const { configure } = require('quasar/wrappers');
 
 module.exports = configure(function (ctx) {
@@ -82,6 +82,8 @@ module.exports = configure(function (ctx) {
           asyncWebAssembly: true,
         };
       },
+      devtool: 'source-map',
+      env: require('dotenv').config().parsed,
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-devServer
@@ -89,8 +91,12 @@ module.exports = configure(function (ctx) {
       server: {
         type: 'http',
       },
+      host: '172.0.0.254',
       port: 8080,
       open: false, // opens browser window automatically
+      client: {
+        webSocketURL: 'wss://demo.cauth.org/ws',
+      },
     },
 
     // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-framework

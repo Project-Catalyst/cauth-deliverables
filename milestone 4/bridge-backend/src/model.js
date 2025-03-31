@@ -10,8 +10,8 @@ const db = { // Here is a fast overview of what your db model should look like
     user: null, // Whatever you want... This is where you can be flexible with the protocol
   },
   client: { // Application wanting to authenticate with this server
-    clientId: '', // Unique string representing the client
-    clientSecret: '', // Secret of the client; Can be null
+    clientId: '0e2ec2df-ee53-4327-a472-9d78c278bdbb', // Unique string representing the client
+    clientSecret: 'G6rarLKbzyd7skbVcxr6ZNSfXrXij4Mjqw4EeLW5QBUKmnVUnbyuTTrLQptf5a6aHKPTG2N7KTcbUTWCM5KpKFuD5g4sAedSynL7HufDmL9FTHAfPkSXzxv8dWSYyvwa', // Secret of the client; Can be null
     grants: [], // Array of grants that the client can use (ie, `authorization_code`)
     redirectUris: [], // Array of urls the client is allowed to redirect to
   },
@@ -38,7 +38,7 @@ module.exports = {
       clientSecret: clientSecret,
       clientName: "Wiki.js",
       grants: ['authorization_code', 'refresh_token'],
-      redirectUris: ['https://wiki.cauth.org/login/dcc11c5f-ed6b-4724-81bd-ae6713337b7c/callback'],
+      redirectUris: ['https://wiki.cauth.org/login/b3338016-aba7-426a-844d-09ba16612e84/callback'],
     }
     return new Promise(resolve => {
       resolve(db.client)

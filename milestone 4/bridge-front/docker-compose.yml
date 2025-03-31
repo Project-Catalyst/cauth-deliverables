@@ -1,0 +1,16 @@
+name: cauth-bridge-web
+services:
+  quasar:
+    environment:
+      - UID=1000
+      - GID=1000
+    restart: unless-stopped
+    build: .
+    #ports:
+    #  - "80:80"
+    networks:
+      proxy-net:
+        ipv4_address: 172.0.0.250
+networks:
+  proxy-net:
+    external: true

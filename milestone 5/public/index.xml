@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CAuth - Login with Cardano Wallet</title>
+    <link>https://www.cauth.org/</link>
+    <description>Recent content on CAuth - Login with Cardano Wallet</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Jan 2025 14:48:21 +0000</lastBuildDate>
+    <atom:link href="https://www.cauth.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting Started</title>
+      <link>https://www.cauth.org/docs/getting-started/</link>
+      <pubDate>Tue, 21 Jan 2025 14:48:21 +0000</pubDate>
+      <guid>https://www.cauth.org/docs/getting-started/</guid>
+      <description>&lt;p&gt;CAuth consists of several components that allow for integration of the mechanism on new and existing sites.&lt;/p&gt;&#xA;&lt;h3 id=&#34;state-of-the-art-report&#34;&gt;State of the Art Report&lt;/h3&gt;&#xA;&lt;p&gt;At the beginning of the project we have created state of the art report. This deliverable was first milestone of the project. Its purpose was to establish groundlevel for the project.&#xA;The report can be read &lt;a href=&#34;https://github.com/Project-Catalyst/cauth-deliverables/tree/main/milestone%201&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;nft-issuer&#34;&gt;NFT Issuer&lt;/h3&gt;&#xA;&lt;p&gt;cAuth NFT Issuer is a web application that enables authorized parties to generate and issue authentication credentials as NFTs on the Cardano blockchain. Connect your CIP-30 compatible wallet, specify credential parameters, and mint authentication tokens directly to user wallets. These NFTs serve as blockchain-based login credentials for applications implementing the cAuth authentication system. &lt;a href=&#34;https://www.cauth.org/docs/nft-issuer/&#34;&gt;link&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>NFT Issuer</title>
+      <link>https://www.cauth.org/docs/nft-issuer/</link>
+      <pubDate>Tue, 21 Jan 2025 14:30:02 +0000</pubDate>
+      <guid>https://www.cauth.org/docs/nft-issuer/</guid>
+      <description>&lt;p&gt;cAuth NFT Issuer is a web application that enables authorized parties to generate and issue authentication credentials as NFTs on the Cardano blockchain.&#xA;Connect your CIP-30 compatible wallet, specify credential parameters, and mint authentication tokens directly to user wallets.&#xA;These NFTs serve as blockchain-based login credentials for applications implementing the cAuth authentication system.&lt;/p&gt;&#xA;&lt;p&gt;A demo is launched at &lt;a href=&#34;https://dapp.cauth.org&#34;&gt;dapp.cauth.org&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Code of this webapp can be viewed on &lt;a href=&#34;https://github.com/Project-Catalyst/cauth-deliverables/tree/8692a135a23642e1e749567c85b37ed846521c1f/milestone%202/code&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.cauth.org/images/nft-issuer/screen1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://www.cauth.org/images/nft-issuer/screen2.png&#34; alt=&#34;Connect Wallet popup&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Libraries</title>
+      <link>https://www.cauth.org/docs/libraries/</link>
+      <pubDate>Tue, 21 Jan 2025 14:48:21 +0000</pubDate>
+      <guid>https://www.cauth.org/docs/libraries/</guid>
+      <description>&lt;h3 id=&#34;frontend-library&#34;&gt;Frontend Library&lt;/h3&gt;&#xA;&lt;p&gt;This is a lightweight JavaScript library for implementing &amp;ldquo;Login with Cardano&amp;rdquo; functionality in web applications.&#xA;It handles wallet connections, NFT credential verification, and authentication flows with minimal configuration.&#xA;It can be used with the backend, if we have data that is persisted between sessions on the server, or without,&#xA;if the data can be safely stored in the front.&lt;/p&gt;&#xA;&lt;p&gt;Key features:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;CIP-30 wallet compatibility&lt;/li&gt;&#xA;&lt;li&gt;NFT credential verification&lt;/li&gt;&#xA;&lt;li&gt;Built-in TypeScript support&lt;/li&gt;&#xA;&lt;li&gt;Vue components&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/Project-Catalyst/cauth-deliverables/tree/8692a135a23642e1e749567c85b37ed846521c1f/milestone%203/client&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>OAuth Bridge</title>
+      <link>https://www.cauth.org/docs/oauth-bridge/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.cauth.org/docs/oauth-bridge/</guid>
+      <description>&lt;h3 id=&#34;oauth-bridge-for-cauth&#34;&gt;OAuth Bridge for cAuth&lt;/h3&gt;&#xA;&lt;p&gt;The OAuth bridge enables traditional Web2 applications to authenticate users through Cardano NFT credentials. This bridge acts as a translator between blockchain-based authentication and the widely-adopted OAuth 2.0 protocol.&#xA;&lt;a href=&#34;https://github.com/Project-Catalyst/cauth-deliverables/tree/8692a135a23642e1e749567c85b37ed846521c1f/milestone%204&#34;&gt;GitHub&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;why-oauth-bridge&#34;&gt;Why OAuth Bridge?&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Widespread Adoption: OAuth 2.0 is the industry standard for authorization, used by millions of applications worldwide. Many existing platforms and frameworks have built-in support for OAuth 2.0, making it the de-facto standard for authentication and authorization.&lt;/li&gt;&#xA;&lt;li&gt;Legacy System Integration: While Web3 technologies are growing, many organizations still rely on traditional Web2 applications. The OAuth bridge allows these systems to benefit from blockchain-based authentication without requiring major architectural changes.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;how-oauth-20-works&#34;&gt;How OAuth 2.0 Works&lt;/h3&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;User Initiates Login&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Close Out</title>
+      <link>https://www.cauth.org/docs/project-close-out/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.cauth.org/docs/project-close-out/</guid>
+      <description>&lt;h2 id=&#34;report&#34;&gt;Report&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.cauth.org/CAuth-PCR.pdf&#34;&gt;PDF Report&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;video&#34;&gt;Video&lt;/h2&gt;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/TeBmDE5V3vI?si=WwSZcsC6QsvY9OhF&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; allowfullscreen&gt;&lt;/iframe&gt;</description>
+    </item>
+    <item>
+      <title>Further Reading</title>
+      <link>https://www.cauth.org/docs/further-reading/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://www.cauth.org/docs/further-reading/</guid>
+      <description>&lt;p&gt;Our &amp;ldquo;State of the Art Report&amp;rdquo; (Milestone 1) &lt;a href=&#34;https://github.com/Project-Catalyst/cauth-deliverables/blob/main/milestone%201/cAuth-State_of_the_Art_Report.pdf&#34;&gt;link&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;standards-and-specifications&#34;&gt;Standards and Specifications&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.w3.org/TR/did-core/&#34;&gt;Decentralized Identifiers (DIDs) v1.0&lt;/a&gt;&lt;br&gt;&#xA;The W3C specification for decentralized identifiers.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://identity.foundation/didcomm-messaging/spec/v2.0/&#34;&gt;DIDComm Messaging v2.0&lt;/a&gt;&lt;br&gt;&#xA;Identity Foundation&amp;rsquo;s specification for DID-based communication.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://trustoverip.org/wp-content/uploads/Introduction-to-ToIP-V2.0-2021-11-17.pdf&#34;&gt;Trust over IP Foundation&lt;/a&gt;&lt;br&gt;&#xA;Comprehensive whitepaper on the Trust over IP stack and vision.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;relevant-cardano-standards&#34;&gt;Relevant Cardano Standards&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://cips.cardano.org/cips/cip25/&#34;&gt;CIP 25 - Media NFT Metadata Standard&lt;/a&gt;&lt;br&gt;&#xA;Defines the metadata format for NFTs on Cardano.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://cips.cardano.org/cips/cip30/&#34;&gt;CIP 30 - Cardano dApp-Wallet Web Bridge&lt;/a&gt;&lt;br&gt;&#xA;Specification for dApp-wallet interactions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>CAuth - Login with Cardano Wallet</title>
+      <link>https://www.cauth.org/about/</link>
+      <pubDate>Tue, 21 Jan 2025 14:28:40 +0000</pubDate>
+      <guid>https://www.cauth.org/about/</guid>
+      <description>&lt;h1 id=&#34;problem&#34;&gt;Problem&lt;/h1&gt;&#xA;&lt;p&gt;Cardano doesn’t have a lightweight, autonomous login mechanism.. As a result apps depend on legacy systems to authenticate users, limiting growth and decentralization&lt;/p&gt;&#xA;&lt;h1 id=&#34;solution&#34;&gt;Solution&lt;/h1&gt;&#xA;&lt;p&gt;Develop a decentralized, open-source authentication system that uses open standards and provides a way to login with just the Cardano blockchain.&lt;/p&gt;&#xA;&lt;p&gt;Project Website on projectcatalyst.io -&amp;gt; &lt;a href=&#34;https://projectcatalyst.io/funds/9/f9-dapps-products-and-integrations/login-with-cardano-wallet-cauth&#34;&gt;link&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

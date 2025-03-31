@@ -1,0 +1,16 @@
+services:
+  cauth-bridge:
+    build: .
+    #ports:
+    #  - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/app
+    command: npm start
+    networks:
+      proxy-net:
+        ipv4_address: 172.0.0.249
+networks:
+  proxy-net:
+    external: true

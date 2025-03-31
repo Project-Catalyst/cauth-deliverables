@@ -1,0 +1,5 @@
+cAuth preprod blockfrost id: preprodogagfluB6ehST1uFm3zk0fB6BAhZaQL9
+NFT:
+c853a6214e209c18404bd6c56bd695e328bce5905de43e763f2999284d616e373537
+
+curl -H "project_id: preprodogagfluB6ehST1uFm3zk0fB6BAhZaQL9" https://cardano-preprod.blockfrost.io/api/v0/assets/c853a6214e209c18404bd6c56bd695e328bce5905de43e763f2999284d616e373537

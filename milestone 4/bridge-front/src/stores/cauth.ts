@@ -26,7 +26,6 @@ export const useCAuthStore = defineStore('cAuth', {
     mode: getCAuthMode(process.env.CAUTH_MODE),
     authenticated: false,
     walletConnected: false,
-    termsAccepted: false,
     wallet: <Wallet>{},
     browserWallet: <BrowserWallet>{},
     selectedAsset: <Asset>{},
@@ -51,7 +50,6 @@ export const useCAuthStore = defineStore('cAuth', {
       this.wallet = <Wallet>{};
       this.browserWallet = <BrowserWallet>{};
       this.walletConnected = false;
-      this.termsAccepted = false;
       this.selectedAsset = <Asset>{};
       this.assets = [];
       this.nfts = [];
